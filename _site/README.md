@@ -36,11 +36,23 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
-### Build your local Jekyll site
+### Install Ruby/Gem/Jekyll
 
-1. Navigate into the root directory of your local Jekyll site repository.
-2. Run your Jekyll site locally:
+1. Install Ruby according to your system.  Once you have ruby install, go to your directory and install the following.
+2. Install Jekyll and bundler gems
+```
+gem install bundler jekyll
+```
+3. Install gems
+```
+bundler install
+```
+4. Build the site and make it available on the local server
    ```
    bundle exec jekyll serve
    ```
-3. Preview your local Jekyll site in your web browser at http://localhost:4000.
+5. Preview your local Jekyll site in your web browser at http://localhost:4000.
+
+### Format
+
+The source code is compiled down to the _site folder.
