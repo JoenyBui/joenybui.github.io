@@ -25,7 +25,7 @@ There are many languages that are
 
 ### What is Functional Programming?
 
-Function programming puts together
+Functional programming puts together
 
 #### Pros
 
