@@ -20,6 +20,11 @@ Lazy learner will model when data is calculated.
 
 KNN performs better with *lower number of features*.  As number of features increases then more data is needed and is prone to overfitting.  PCA or feature selection approach is *recommended*.
 
+#### [Transforming/Translating data into vectors](https://shapeofdata.wordpress.com/2013/10/09/cast-study-2-tokens-in-census-data/)
+
+* token
+* make a list of items into equal distance: (private, self-employed, federal gove) to (1,0,0),(0,1,0),(0,0,1) - set the data into (true/false)
+
 #### Steps
 * Calculate distance
 * Find closest neighbors
