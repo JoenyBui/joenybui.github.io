@@ -33,3 +33,11 @@ KNN performs better with *lower number of features*.  As number of features incr
 ### Cons
 
 * testing is slower/costlier because its lazy (more data point to scan)
+
+## K-modes
+
+Used for clustering categorical algorithms.  
+
+## K-prototypes
+
+(K-prototypes)[https://pdfs.semanticscholar.org/d42b/b5ad2d03be6d8fefa63d25d02c0711d19728.pdf] Mixed categorical data and numerical data
