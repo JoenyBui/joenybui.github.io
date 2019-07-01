@@ -13,6 +13,13 @@ Certain distance measurements are:
 * Hamming distance
 * Minkowski distance
 
+Eager learners will construct a generalized model before performing prediction.
+Lazy learner will model when data is calculated.
+
+#### Curse fo Dimensionality
+
+KNN performs better with *lower number of features*.  As number of features increases then more data is needed and is prone to overfitting.  PCA or feature selection approach is *recommended*.
+
 #### Steps
 * Calculate distance
 * Find closest neighbors
