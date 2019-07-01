@@ -40,4 +40,4 @@ Used for clustering categorical algorithms.
 
 ## K-prototypes
 
-(K-prototypes)[https://pdfs.semanticscholar.org/d42b/b5ad2d03be6d8fefa63d25d02c0711d19728.pdf] Mixed categorical data and numerical data
+[K-prototypes](https://pdfs.semanticscholar.org/d42b/b5ad2d03be6d8fefa63d25d02c0711d19728.pdf) Mixed categorical data and numerical data
