@@ -1,4 +1,6 @@
 ---
+layout: post
+author: Joeny Bui
 ---
 
 # Clustering
