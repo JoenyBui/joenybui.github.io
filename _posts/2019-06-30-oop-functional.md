@@ -10,7 +10,9 @@ Two of the most prevalent programming paridigm is Object Oriented Programminga a
 
 ### What is Object Oriented Programming (OOP)?
 
-There are many languages that are
+OOP is a programming paradigm based on the concept of **objects**, which are data structures that contain data, in the form of fields, often known as attributes.
+
+Functional porgramming is a programming paradigm that treat **functions** as a first class citizen.  It uses avoid changing-state and mutable data.
 
 #### Pros
 
