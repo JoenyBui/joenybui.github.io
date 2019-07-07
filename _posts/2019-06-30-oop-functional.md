@@ -6,7 +6,7 @@ show: true
 
 ## Object Oriented Programming vs. Functional Programming
 
-~[VS](https://cdn.educba.com/academy/wp-content/uploads/2018/07/Functional-Programming-vs-OOP.jpg)
+![VS](https://cdn.educba.com/academy/wp-content/uploads/2018/07/Functional-Programming-vs-OOP.jpg)
 
 Two of the most prevalent programming paridigm is Object Oriented Programminga and Functional Programming.
 
