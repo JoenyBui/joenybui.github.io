@@ -26,7 +26,6 @@ OOP is a programming paradigm based on the concept of **objects**, which are dat
 
 * objects can be easily reused
 * objects can be easily created
-#### Cons
 
 #### Languages Familiar 
 
@@ -61,7 +60,6 @@ Functional Programming does not work on executing commands or statements rather 
 * nested functions
 * parallel programming
 
-#### Cons
 
 #### Languages Familiar
 
