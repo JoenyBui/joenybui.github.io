@@ -4,13 +4,13 @@ author: Joeny Bui
 show: true
 ---
 
-## Object Oriented Programming vs. Functional Programming
+# Object Oriented Programming vs. Functional Programming
 
 ![VS](https://cdn.educba.com/academy/wp-content/uploads/2018/07/Functional-Programming-vs-OOP.jpg)
 
 Two of the most prevalent programming paridigm is Object Oriented Programminga and Functional Programming.
 
-### What is Object Oriented Programming (OOP)?
+## What is Object Oriented Programming (OOP)?
 
 OOP is a programming paradigm based on the concept of **objects**, which are data structures that contain data, in the form of fields, often known as attributes.
 
@@ -22,12 +22,12 @@ OOP is a programming paradigm based on the concept of **objects**, which are dat
 3. Polymorphism
 4. Encapsulation
 
-#### Pros
+### Pros
 
 * objects can be easily reused
 * objects can be easily created
 
-#### Languages Familiar 
+### Languages Familiar 
 
 * Java
 * C++
@@ -40,7 +40,7 @@ OOP is a programming paradigm based on the concept of **objects**, which are dat
 * Dart
 
 
-### What is Functional Programming?
+## What is Functional Programming?
 
 Functional porgramming is a programming paradigm that treat **functions** as a first class citizen.  It uses avoid changing-state and mutable data.
 
@@ -53,7 +53,7 @@ Functional Programming does not work on executing commands or statements rather 
 5. Type Systems
 6. Referential Transparency
 
-#### Pros
+### Pros
 * Great fit for data science works
 * efficiency (?)
 * lazy evaluation
@@ -61,7 +61,7 @@ Functional Programming does not work on executing commands or statements rather 
 * parallel programming
 
 
-#### Languages Familiar
+### Languages Familiar
 
 * Scala
 * Python (sortof)
