@@ -98,9 +98,22 @@ class Node:
 
 ## Stacks
 
+![stack_data_structure](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/stack.png)
+
+Stack is a linear data structure which follows a particular.
+
+Operation ares ==> O(1)
+
+* Push - adds an item in the stack, then it is said to be an overflow condition
+* Pop - removes an item from the stack.  The items are popped in the reversed order in which they are pushed.  If the stack is empty, then it is said to be an underflow condition.
+* Peek or Top - return top element of stack
+* isEmpty - return true if stack is empty, else false
+
+
 ### FIFO
 
-### FILO
+### LIFO (Last In First Out) / FILO (First In Last Out)
+
 
 ## Queues
 
