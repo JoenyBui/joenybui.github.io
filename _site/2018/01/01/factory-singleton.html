@@ -1,0 +1,44 @@
+<h2>Factory Singleton</h2>
+<p>01 Jan 2018 - Joeny Bui</p>
+
+<h1 id="singleton-design-pattern">Singleton Design Pattern</h1>
+
+<p>Restricts the instantiation of a class to one “single” instance.  This is useful when exactly one object is needed to coordinate actions across the system.</p>
+
+<ul>
+  <li>used for centralized management of internal or external resources</li>
+  <li>provide a global point of access to themselves</li>
+  <li>implementation involves a static member in the class and a private constructor</li>
+  <li>ensure it works in multi-threaded environment</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<ul>
+  <li>logger classes - provides a global logging access point in the application component</li>
+  <li>configuration classes - design the classes which provide the configuration settings</li>
+  <li>accessing resources in shared mode - accessing from multiple classes on a serial port (singleton allows synchronization)</li>
+  <li>factories implementation as a singleton</li>
+  <li>using reflection you can avoid modifying the factory class code (registration)</li>
+</ul>
+
+<h2 id="consideration">Consideration</h2>
+
+<ul>
+  <li>multithreading</li>
+  <li>serialization - when using Serializable interface need to have to implement readResolve method</li>
+  <li>classloaders - loaded by two different class loader will have two instance</li>
+  <li>global access point</li>
+</ul>
+
+<h1 id="factory-design-pattern-abstract-factory">Factory Design Pattern (Abstract Factory)</h1>
+
+<p><img src="https://www.oodesign.com/images/stories/factory%20implementation.gif" alt="FDP" /></p>
+
+<p>The client needs a product, the factory object will return a new product given the information about the type of object it needs.  Advantage is that new components can be added without changing a single line of code.</p>
+
+<ul>
+  <li>Create object without exposing the instantiation logic to the client.</li>
+  <li>Refers to the newly created object through a common interface.</li>
+</ul>
+

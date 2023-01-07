@@ -1,0 +1,84 @@
+<h2>Sharding</h2>
+<p>10 Oct 2017 - Joeny Bui</p>
+
+<h1 id="sharding-strategies">Sharding Strategies</h1>
+
+<p>Sharding is a method of splitting and storing a single logical dataset in multiple databases.  Sharding allows the database to scale along with it’s traffic.</p>
+
+<p>How the data is read affects your sharding strategy choice?
+How the data is distributed affects the storage and performance hotspots.<br />
+Redistributing data is important as you scale.</p>
+
+<ul>
+  <li>Vertical Partition –&gt; storing different ables &amp; columns in separate database</li>
+  <li>Horizontal Partitioning (sharding) –&gt; storing same tables in multiple database nodes</li>
+</ul>
+
+<p><img src="https://miro.medium.com/max/700/1*yyHih3GveWruzwYgLxTu3w.png" alt="alt text" /></p>
+
+<h2 id="vertical-partiioning">Vertical Partiioning</h2>
+
+<p>Done at the application level where there is an obvious split.  If the applications needs read performance (add caches or database replicas).</p>
+
+<ul>
+  <li>Binary Blobs - ususally separated</li>
+  <li>Full text search</li>
+  <li>Tagging</li>
+  <li>Analytics</li>
+</ul>
+
+<h2 id="shard-strategies">Shard Strategies</h2>
+
+<ul>
+  <li>a logical shard (data sharing the same partition key) must fit in a single node (cannot span multiple nodes)</li>
+  <li>sharding data by user over time due to power user located in one shard</li>
+  <li>replication is critical</li>
+</ul>
+
+<h3 id="algorithmic-sharding">Algorithmic Sharding</h3>
+
+<p><img src="https://miro.medium.com/max/700/1*fx3wbDDGHo2cgcAvDiHkDg.png" alt="Algorithm shard" /></p>
+
+<ul>
+  <li>uses a sharding function <code class="highlighter-rouge">(partition_key) -&gt; datbase_id</code>, such as <code class="highlighter-rouge">hash(key) % num_db</code>.</li>
+  <li>distributes data by its sharding function only</li>
+  <li>each partition should be similarly sized</li>
+  <li>(pros) great for key-value databases with homogeneous values</li>
+  <li>(con) resharding is challenging because it requires updating the sharding function and moving data around the cluster</li>
+  <li><a href="https://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html">consisitent hashing</a></li>
+</ul>
+
+<h3 id="dynamic-sharding">Dynamic Sharding</h3>
+
+<p><img src="https://miro.medium.com/max/700/1*9we5WT45G7_unZ6n0N6ncw.png" alt="" /></p>
+
+<ul>
+  <li>an external locator service determines the location of entries</li>
+  <li>(cons) to read and write data, clients need to consult the locator service first</li>
+  <li>(pros) operation onf primary key becomes very trivial</li>
+  <li>(pros) more resilient to nonuniform distribution of data</li>
+  <li>(cons) locator service (master shard) is the single point of failure</li>
+  <li>consensus algorithms and synchronous replications are used to store this data</li>
+  <li>HDFS uses a Name Node to store filesystem metadata</li>
+</ul>
+
+<h3 id="entity-groups">Entity Groups</h3>
+
+<p><img src="https://miro.medium.com/max/700/1*o5Tv6C2bMdBn8U7Lcq3PDw.png" alt="" /></p>
+
+<ul>
+  <li>store related entities in the same partition</li>
+  <li>queries within a single physical shard are efficient</li>
+  <li>stronger consistency semantics can be achieved within a shard</li>
+  <li>(cons) queries spanning multiple partitions have looser consistency gurantees</li>
+</ul>
+
+<h3 id="hierarchical-keys--column-oriented-database">Hierarchical keys &amp; Column-Oriented Database</h3>
+
+<p><img src="https://miro.medium.com/max/500/1*usEoE4YEU-B-_-VOBOSnQA.png" alt="Hierarchical keys" /></p>
+
+<ul>
+  <li>Column-oriented databases are a extention of key-value stores</li>
+  <li>(pros) allows databases to implement data-agnostic sharding mechanisms and efficient storage engines</li>
+  <li>(pros) can model a problem such as (time series)[http://planetcassandra.org/getting-started-with-time-series-data-modeling/] efficiently</li>
+</ul>

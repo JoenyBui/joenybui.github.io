@@ -1,0 +1,63 @@
+<h2>Data Intensive</h2>
+<p>02 Jan 2010 - </p>
+
+<h1 id="data-intensive">Data-Intensive</h1>
+
+<ul>
+  <li>Store data so that they, or another application, can find it again later (databases)</li>
+  <li>Remember the result of an expensive operation, to speed up reads (caches)</li>
+  <li>Allow users to search data by keyword or filter it in various ways (searches indexes)</li>
+  <li>Send a message to another process, to be handled asynchronously (message queues)</li>
+  <li>Observe what is happening, and act on events as they occur (stream processing)</li>
+  <li>Periodically crunch a large amount of accumalted data (batch processing)</li>
+</ul>
+
+<ol>
+  <li>Relaibility
+    <ul>
+      <li>tolerating hardware &amp; software faults</li>
+      <li>human errors</li>
+    </ul>
+  </li>
+  <li>Scalability
+    <ul>
+      <li>measuring load &amp; performance</li>
+      <li>latency percentiles, throughput</li>
+    </ul>
+  </li>
+  <li>Maintainability
+    <ul>
+      <li>operability</li>
+      <li>simplicity</li>
+      <li>evolvability</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="questions">Questions</h2>
+
+<ul>
+  <li>How do you ensure that the data remains correct and cmoplete, even when things go wrong internally?</li>
+  <li>How do you provide consistently good performance to clients, even when parts of your system are degraded?</li>
+  <li>How do you scale to handle an increase in load?</li>
+  <li>What does a good API for the service look like?</li>
+</ul>
+
+<h2 id="reliability">Reliability</h2>
+
+<ul>
+  <li><em>Fault</em> is not the same as <em>failure</em>.  A <em>fault</em> is usually deifned as one component of the system deviating from its spec, whereas a <em>failure</em> is when the system as a whole stops providing the required service to the user.</li>
+  <li>It might be beneficial to test you system by introducing <em>faults</em> - see <strong>Chaos Monkey</strong>.</li>
+</ul>
+
+<h2 id="monotonic-read">Monotonic Read</h2>
+
+<p>Monotoic reads is a gurantee that this kind of anomaly does not happen where the user will read from different replications  It’s a lesser gurantee than strong consistency, but a stronger gurantee then eventual consistency.  One way to of achieving monotonic reads is to make sure that each reads from the same replica (you can read from the same replica).</p>
+
+<h2 id="consistent-prefix-reads">Consistent Prefix Reads</h2>
+
+<p>This guranteeds says that if a sequence of writes happends in a certain order, then anyone reading those writes will see them appear in the same order.  A particular problem in partition (sharded) databases.</p>
+
+<h2 id="multiple-leader-replicaiton">Multiple-Leader Replicaiton</h2>
+
+<p>Allows multiple leaders to write to database and then replicated across systems.</p>

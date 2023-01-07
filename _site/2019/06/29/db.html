@@ -1,0 +1,132 @@
+<h2>Db</h2>
+<p>29 Jun 2019 - Joeny Bui</p>
+
+<h1 id="sql-or-nosql">SQL or NoSQL</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">SQL</th>
+      <th style="text-align: center">NoSQL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Data uses Schemas</td>
+      <td style="text-align: center">Schema-less</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Relations! (Complicated queries, but normalization</td>
+      <td style="text-align: center">No (or very few) relations (Gread for reading)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Data is distributed across multiple tables</td>
+      <td style="text-align: center">Data is typically merged / nested in a frew collections</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Scaling (Can be hard)</td>
+      <td style="text-align: center">Bboth horizontal and vertical scaling is possible</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Limitations for lots of (thousands) read &amp; write queries per second)</td>
+      <td style="text-align: center">Great performance for mass (simple) and read &amp; write performance</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dbs">DBS</h2>
+
+<h3 id="sql-relational-database">SQL (Relational Database)</h3>
+
+<p>Index enhance database performances but it adds a certain overhead to the database system as a whole.</p>
+
+<ul>
+  <li>Structured Query Language (Need to know ahead of time what the data looks like).</li>
+  <li>The design decision would be hard to change in the future</li>
+  <li>Atomic –&gt; it would wait for all transactions to complete before it commits</li>
+  <li>strong schemas (description of what is in the database)</li>
+  <li>Normalization</li>
+  <li>multiple tables that are related</li>
+  <li>foreign key</li>
+  <li>many to many relations</li>
+  <li>one to one</li>
+  <li>one to many</li>
+  <li>indexes (prevent sequential scan)</li>
+  <li>joining tables</li>
+</ul>
+
+<p>Replication is a process that enables you to have multiple copies of the data copied automatically from ‘master’ to ‘slave’ databses.  There are multiple benefits,which of them being:</p>
+
+<ul>
+  <li>backup</li>
+  <li>spreading the load to improve performance</li>
+  <li>analytic teams can work on one of the slave databases, thus not hurting the performances of the main database in case of long running and intensive queries</li>
+</ul>
+
+<h3 id="postgres-vs-mysql">Postgres vs MySQL</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>-</td>
+      <td>Postgres</td>
+      <td>MySQL</td>
+    </tr>
+    <tr>
+      <td>Indexes</td>
+      <td>B-Tree, hash indexes, expression indexes, partial indexes</td>
+      <td>B-Tree, R-Trees, Hash indexes</td>
+    </tr>
+    <tr>
+      <td>Deployed</td>
+      <td>Written in C</td>
+      <td>Written in C and C++</td>
+    </tr>
+    <tr>
+      <td>Replication</td>
+      <td>2-safe replication (master is synchronized with a slave database. Waits for writes to finish in both database.</td>
+      <td>One-way asynchronous replication where one server acts as a master and others a slaves.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="nosql-mongodb--amazon-dynamodbb">NoSQL (MongoDB / Amazon DynamoDBB)</h3>
+
+<ul>
+  <li>Semi or No structured data</li>
+  <li>Humongous DBB</li>
+  <li>Eventually consistent (you would need to wait)</li>
+  <li>Collections / Documents</li>
+  <li>Multiple fields (no schemas!)</li>
+  <li>There are no relations in a nosql world.</li>
+  <li>You put all the information in one place. (Duplicate data, you will need to update in multiple location)</li>
+</ul>
+
+<h2 id="normal-form">Normal Form</h2>
+
+<h3 id="first-normal-form-1nf">First Normal Form (1NF)</h3>
+
+<p>A table (relation) in first normal form is immune to some kinds of modification anomalies.
+Every table in first normal form must have a unique primary key, and that key may consist on one or more columns.  A key consisting of more than one column is called a <em>composite key</em>.</p>
+
+<p><strong>Must Have</strong></p>
+<ul>
+  <li>the table is two-dimensional with rows and columns</li>
+  <li>each row contains data that pertains to some thing or portion of a thing</li>
+  <li>each column contains data for a single attribute of the thrings it’s describing</li>
+  <li>each cell (intersection of a row and a column) of the table must have only a single value</li>
+  <li>entries in any column must all be of the same kind</li>
+  <li>each column must have a unique name</li>
+  <li>no two rows may be identifical</li>
+  <li>the order of the comuns and the order of the rows are not significant</li>
+</ul>
+
+<h3 id="second-normal-form-2nf">Second Normal Form (2NF)</h3>
+
+<p>A <em>functional dependency</em> is a relationship between or among attributes.  One attribute is functionally dependent on another.</p>
+<h3 id="third-normal-form-3nf">Third Normal Form (3NF)</h3>
+
+<p><strong>Third normal</strong> form (3NF) is a normal form that is used to normalized a database design to reduce the duplication of data and ensure <em>referential integrity</em>.</p>
+
+<p><em>Transitive depdendency</em> occurs when one attribute depends on a second attribute, which depends on a third attribute.  Deletions in a table with such a dependency can cause unwanted information loss.  A relation in thrid normal form is a relation in second normal form with no transitive dependencies.</p>
+

@@ -1,0 +1,118 @@
+<h2>Owasp</h2>
+<p>01 Jan 2018 - Joeny Bui</p>
+
+<h1 id="open-web-application-security-project">Open Web Application Security Project</h1>
+
+<p>OWASP is an international non-profit application dedicated to web application security.</p>
+
+<h2 id="top-10">TOP 10</h2>
+
+<h3 id="1-injection">1. Injection</h3>
+
+<p>Vulnerabilities - database injeciton, LDAP. SQL Injection. System commands.</p>
+
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+  <li>Build your web application properly with the write access control protection.</li>
+  <li>Query parametization - the commnads that separate query and parameters</li>
+  <li>Validate user input</li>
+  <li>Add “Limit” to limit the exposure</li>
+</ul>
+
+<h3 id="2-broken-authentication">2. Broken Authentication</h3>
+
+<p>You allow your users to get into your application without the right credential.</p>
+
+<p>After authentication the user will be given a SessionID for the duration of the session.</p>
+
+<ul>
+  <li>Credential stuffing - use an automated tools to try different username and password</li>
+  <li>Automated attacks - user random username and password</li>
+  <li>Default passwords</li>
+</ul>
+
+<h4 id="best-practices-1">Best Practices</h4>
+
+<ul>
+  <li>multi-factor authentication =&gt; token, cell-phone, thumbprint, eye-scana</li>
+  <li>password checking - make sure users passsword is not common</li>
+  <li>password complexity</li>
+  <li>limits on failed login</li>
+  <li>server side session id management</li>
+</ul>
+
+<h3 id="3-sensitive-data-exposure">3. Sensitive Data Exposure</h3>
+
+<p>Some pages uses encryption and some do not.  TLS/SSL and HTTP.</p>
+
+<p>Maybe they used weak ciphers.</p>
+
+<h4 id="best-practice">Best Practice</h4>
+
+<ul>
+  <li>Encrypt all the pages that need to be encrypt.</li>
+  <li>Encrypt the sensitive data at rest.</li>
+  <li>Classify your data</li>
+  <li>Apply control your sensitive data</li>
+  <li>Strong ciphers</li>
+  <li>Possible PFS (Perfect forward secrecy) and/or HSTS</li>
+  <li>Don’t store sensitive data unless you have to store the sensitive data (use and trash)</li>
+</ul>
+
+<h3 id="4-xml-external-entities-xee">4. XML External Entities (XEE)</h3>
+
+<p>Take advantage of XML parser to parse bad data.k  Accept XML directly.  Reference to an external entity.  There could trick your web app from parsing bad command.</p>
+
+<p>XXE (Java is enabled by default)</p>
+
+<p>Billion Laughs - asymmetric attack</p>
+
+<h4 id="best-practice-1">Best Practice</h4>
+
+<ul>
+  <li>Disable XXE completely</li>
+  <li>Disable DTE parsing</li>
+  <li>Input validation</li>
+  <li>Source code analysis tools</li>
+  <li>Dynamic security testing</li>
+  <li>Web Application Firewall (WAF)</li>
+</ul>
+
+<h3 id="5-broken-access-control">5. Broken Access Control</h3>
+
+<p>Access control is given access to some users and keeping everything else.</p>
+
+<ul>
+  <li>admin functions</li>
+  <li>normal user functions</li>
+  <li>auditing features</li>
+  <li>super users</li>
+</ul>
+
+<p>Users get access to something it’s not suppose to have.</p>
+
+<p>DAST and SAST</p>
+
+<p>Lot’s of manual testing</p>
+
+<h5 id="best-practices-2">Best Practices</h5>
+
+<ul>
+  <li>Trusted server side code</li>
+  <li>Denied by default</li>
+  <li>Build access control one time, and reuse it</li>
+  <li>Log your failure and alert admin</li>
+  <li>Rate limit access</li>
+  <li>Least privileage, give them access to the minimum controls that they need and duration</li>
+</ul>
+
+<h3 id="6-security-misconfiguration">6. Security Misconfiguration</h3>
+
+<h3 id="7-cross-site-scripting">7. Cross-Site Scripting</h3>
+
+<h3 id="8-insecure-deserialization">8. Insecure Deserialization</h3>
+
+<h3 id="9-using-components-with-known-vulnerabilities">9. Using Components with Known Vulnerabilities</h3>
+
+<h3 id="10-insuffient-logging-and-monitoring">10. Insuffient Logging And Monitoring</h3>
+

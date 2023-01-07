@@ -1,0 +1,89 @@
+<h2>Solid</h2>
+<p>20 Sep 2018 - Joeny Bui</p>
+
+<h1 id="solid-principles">SOLID Principles</h1>
+
+<ul>
+  <li>make software more understandable</li>
+  <li>easier to maintain</li>
+  <li>easier to extend</li>
+</ul>
+
+<h2 id="s---single-responsibility-principle">(S) - Single Responsibility Principle</h2>
+
+<p>Every module or class should have responsibility over a single part of the functionality provided.</p>
+
+<ul>
+  <li>coupling - refers to how inextricably linked different aspects of an appplications are</li>
+  <li>cohesion - refers to how closely related the contens of a particular class or package may be</li>
+  <li>each responsibilty of a class as reson for change, if you can think of more than one reason to change a class then you have more than one responsibility</li>
+</ul>
+
+<p>Examples of responsibilties to consider that may need to be separated include:</p>
+<ul>
+  <li>Persistence</li>
+  <li>Validation</li>
+  <li>Notification</li>
+  <li>Error Handling</li>
+  <li>Logging</li>
+  <li>Class Selection / Instantiation</li>
+  <li>Formatting</li>
+  <li>Parsing</li>
+  <li>Mapping</li>
+</ul>
+
+<h2 id="0---openclosed-principle">(0) - Open/Closed Principle</h2>
+
+<p>Software entities (classes, modules, functions, etc.) should be open for extensions, but closed for modification.</p>
+
+<ul>
+  <li>creating software entities whose behavior can be changed without the need to edit and recompile the code itself</li>
+  <li><a href="https://deviq.com/strategy-design-pattern/">Strategry Pattern</a></li>
+  <li>polymorphism</li>
+  <li>inheritance</li>
+</ul>
+
+<h2 id="l---liskov-substitution-principle">(L) - Liskov substitution Principle</h2>
+
+<p>Objects in a program should be replaceable with instances of their subtype without altering the correctness of the program.  In layman term, the subtype must be substitutable for their base types.</p>
+
+<ul>
+  <li>if <strong>S</strong> is a subtype of <strong>T</strong>, the object of type <strong>T</strong> may be replaced with object of type <strong>S</strong></li>
+  <li>override parent methods</li>
+  <li>if violated, it tends to result in a lot of extra conditional logic scattered throughout the application checking to see the specific type</li>
+  <li>very common violations is partial implementation of interface or base class, leaving unimplemented methods or properties to throw an exception</li>
+</ul>
+
+<h2 id="i---interface-segregation-pinciple">(I) - Interface segregation Pinciple</h2>
+
+<p>No client should be forced to depend on methods it does not use.</p>
+
+<ul>
+  <li>Developers should favor thing, focused interfaces to ‘fat’ interfaces that offer more functionality</li>
+  <li>Interface should be <em>cohesive</em>; they have groups of operations that logically belonging together</li>
+  <li>Do not add additional functionality to an existing interface by adding new methods.</li>
+  <li>Create new intefaces and have your class implement multiple interface</li>
+  <li><a href="https://deviq.com/repository-pattern/">repository pattern</a></li>
+</ul>
+
+<h2 id="d---dependency-inversion-principle">(D) - Dependency Inversion Principle</h2>
+
+<p><img src="https://ardalis.com/wp-content/uploads/2012/04/lord-business-and-the-kragle.jpg" alt="Don't be this guy" /></p>
+
+<p>High level modules should not depend on low level modules; both should depend on abstractions.</p>
+
+<ul>
+  <li>Abstractions should not depend on details.</li>
+  <li>Details should depend on abstractions.</li>
+  <li>Use <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a></li>
+  <li><a href="https://ardalis.com/new-is-glue">New is Glue</a></li>
+</ul>
+
+<h2 id="bonus-dry-dont-repeat-yourself">Bonus: DRY (Don’t Repeat Yourself)</h2>
+
+<p>Duplication in logic should be eliminated via abstraction; duplication in process should be eliminated via automation.</p>
+
+<ul>
+  <li>if-then and switch statements have a habit of being duplicated</li>
+  <li>eliminate copy past programming or poor understanding of how to apply abstraction</li>
+</ul>

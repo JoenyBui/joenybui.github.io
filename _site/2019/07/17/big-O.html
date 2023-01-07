@@ -1,0 +1,354 @@
+<h2>Big O</h2>
+<p>17 Jul 2019 - Joeny Bui</p>
+
+<h1 id="big-o-notation">Big O Notation</h1>
+
+<p>Used to classify algorithms according to how their running time or space requirements grow as the input size grow.</p>
+
+<p><em>O</em> is referred to the <strong>order of the function</strong>.</p>
+
+<p><img src="https://he-s3.s3.amazonaws.com/media/uploads/ece920b.png" alt="Big-O" /></p>
+
+<h2 id="common-data-structure">Common Data Structure</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Data Structure</th>
+      <th style="text-align: center">Time Complexity</th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Space Complexity</th>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">Average</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">Worst</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">Worst</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Access</td>
+      <td style="text-align: center">Search</td>
+      <td style="text-align: center">Insertion</td>
+      <td style="text-align: center">Deletion</td>
+      <td style="text-align: center">Access</td>
+      <td style="text-align: center">Search</td>
+      <td style="text-align: center">nsertion</td>
+      <td style="text-align: center">Deletion</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Array</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Stack</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Queue</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Singly-Linked List</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Doubly-Linked List</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(n)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Skip List</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hash Table</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">Θ(1)</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Binary Search Tree</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Cartesian Tree</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">B-Tree</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Red-Black Tree</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Splay Tree</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">N/A</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">AVL Tree</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">KD Tree</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">Θ(log(n))</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center">O(n)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="array-sorting-algorithms">Array Sorting Algorithms</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Algorithm</th>
+      <th style="text-align: center">Time Complexity</th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Space Complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">Best</td>
+      <td style="text-align: center">Average</td>
+      <td style="text-align: center">Worst</td>
+      <td style="text-align: center">Worst</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Quicksort</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O*log(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Mergesort</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Timsort</td>
+      <td style="text-align: center">Ω(n)</td>
+      <td style="text-align: center">Θ(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Heapsort</td>
+      <td style="text-align: center">Ω(n log(n))</td>
+      <td style="text-align: center">Θ(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Bubble Sort</td>
+      <td style="text-align: center">Ω(n)</td>
+      <td style="text-align: center">Θ(n^2)</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Insertion Sort</td>
+      <td style="text-align: center">Ω(n)</td>
+      <td style="text-align: center">Θ(n^2)</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Selection Sort</td>
+      <td style="text-align: center">Ω(n^2)</td>
+      <td style="text-align: center">Θ(n^2)</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Tree Sort</td>
+      <td style="text-align: center">Ω(n log(n))</td>
+      <td style="text-align: center">Θ(n log(n))</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Shell Sort</td>
+      <td style="text-align: center">Ω(n log(n))</td>
+      <td style="text-align: center">Θ(n(log(n))^2)</td>
+      <td style="text-align: center">O(n(log(n))^2)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Bucket Sort</td>
+      <td style="text-align: center">Ω(n+k)</td>
+      <td style="text-align: center">Θ(n+k)</td>
+      <td style="text-align: center">O(n^2)</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Radix Sort</td>
+      <td style="text-align: center">Ω(nk)</td>
+      <td style="text-align: center">Θ(nk)</td>
+      <td style="text-align: center">O(nk)</td>
+      <td style="text-align: center">O(n+k)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Counting Sort</td>
+      <td style="text-align: center">Ω(n+k)</td>
+      <td style="text-align: center">Θ(n+k)</td>
+      <td style="text-align: center">O(n+k)</td>
+      <td style="text-align: center">O(k)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Cubesort</td>
+      <td style="text-align: center">Ω(n)</td>
+      <td style="text-align: center">Θ(n log(n))</td>
+      <td style="text-align: center">O(n log(n))</td>
+      <td style="text-align: center">O(n)</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,158 @@
+<h2>Fundamentals</h2>
+<p>01 Aug 2019 - Joeny Bui</p>
+
+<h1 id="data-structures">Data Structures</h1>
+
+<h2 id="linked-lists">Linked Lists</h2>
+
+<p>A linked list is a linear datat structure, in which the element are not stored at contiguous memory locations.  The elements in a linked list are linked using pointers.</p>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png" alt="Image" /></p>
+
+<p>Arrays can be used to store linear data of similar types, but arrays have following limitations.</p>
+
+<ol>
+  <li>The size of the arrays if fixed.  We must know the upper limit in advanced.  Memory allocations is equal to the upper limit irrespective of the usage.</li>
+  <li>Insert a new element in an array is expensive, because room has to be created for the new elements and to create room existing elements have to shifted.</li>
+</ol>
+
+<p>Pros:</p>
+
+<ul>
+  <li>Dynamic Size</li>
+  <li>Ease of insertion/deletion</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+  <li>Random access is not allowed.  We have to access elements sequentially starting from the first node.  Cannot do binary search with linked lists efficiently with its default implementation.</li>
+  <li>Extra memory space for a pointer is required with each element of the list.</li>
+  <li>Not cache friendly.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<h2 id="binary-trees">Binary Trees</h2>
+
+<p>Trees are hierarchical data structures.    A tree with whoose elements have at most 2 children is called a binary tree (typically called left and right child).</p>
+
+<ol>
+  <li>Good for file system.</li>
+  <li>Provide moderate access/search</li>
+  <li>Provide moderate insertion/deletion</li>
+  <li>No upper limit of number of nodes</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># binary tree</span>
+<span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">key</span>
+</code></pre></div></div>
+
+<h3 id="tree-include">Tree Include</h3>
+
+<ol>
+  <li>Manipulate hierarchical data.</li>
+  <li>Make information easy to search (see tree traversal)</li>
+  <li>Manipulate sorted lists of data.</li>
+  <li>As a workflow for compositing digital images for visual effects.</li>
+  <li>Router algorithms</li>
+  <li>Form of a multi-stage deicision-making</li>
+</ol>
+
+<p><strong>Terms</strong></p>
+
+<ul>
+  <li>root - topmost node</li>
+  <li>children - elements that are directly under an elements</li>
+  <li>parent - directly above an element</li>
+</ul>
+
+<h2 id="tries-aka-digitial-tree-radix-tree-or-prefix-tree">Tries (aka digitial tree, radix tree or prefix tree)</h2>
+
+<p>Trie is an efficient information re<strong>Trie</strong>val data structure (often used to store characters).  Allowed for very fast lookup.<br />
+Using Trie, search complexities can be brought to optimal limit (key length).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Binary Tree ==&gt; M * log (N)
+Trie ==&gt; O(M)
+
+where:
+    M is maximum strength length
+    N is number of keys in tree
+</code></pre></div></div>
+
+<p>Penalty is on Trie storage requirements.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Node:
+    children = &lt;Character, Node&gt;    
+    is_complete_word = None
+</code></pre></div></div>
+
+<ul>
+  <li>store location in tree (index or return node of location)</li>
+  <li>validation of words</li>
+</ul>
+
+<h2 id="stacks">Stacks</h2>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/stack.png" alt="stack_data_structure" /></p>
+
+<p>Stack is a linear data structure which follows a particular.</p>
+
+<p>Operation ares ==&gt; O(1)</p>
+
+<ul>
+  <li>Push - adds an item in the stack, then it is said to be an overflow condition</li>
+  <li>Pop - removes an item from the stack.  The items are popped in the reversed order in which they are pushed.  If the stack is empty, then it is said to be an underflow condition.</li>
+  <li>Peek or Top - return top element of stack</li>
+  <li>isEmpty - return true if stack is empty, else false</li>
+</ul>
+
+<h3 id="fifo">FIFO</h3>
+
+<h3 id="lifo-last-in-first-out--filo-first-in-last-out">LIFO (Last In First Out) / FILO (First In Last Out)</h3>
+
+<h2 id="queues">Queues</h2>
+
+<h2 id="vectors--arraylists">Vectors / ArrayLists</h2>
+
+<h2 id="hash-tables">Hash Tables</h2>
+
+<h1 id="algorithms">Algorithms</h1>
+
+<h2 id="breadth-first-search">Breadth First Search</h2>
+
+<h2 id="depth-first-search">Depth First Search</h2>
+
+<h2 id="binary-search">Binary Search</h2>
+
+<h2 id="merge-sort">Merge Sort</h2>
+
+<h2 id="quick-sort">Quick Sort</h2>
+
+<h2 id="tree-insert--find-etc">Tree Insert / Find /etc</h2>
+
+<h1 id="concepts">Concepts</h1>
+
+<h2 id="bit-manipulation">Bit Manipulation</h2>
+
+<h2 id="singleton-design-pattern">Singleton Design Pattern</h2>
+
+<h2 id="factory-design-pattern">Factory Design Pattern</h2>
+
+<h2 id="memory-stack-vs-heap">Memory (Stack vs Heap)</h2>
+
+<h2 id="recursion">Recursion</h2>
+
+<h2 id="big-o-time">Big-O Time</h2>

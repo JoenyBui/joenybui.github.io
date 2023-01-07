@@ -1,0 +1,49 @@
+<h2>Nginx Apache</h2>
+<p>01 Jan 2019 - Joeny Bui</p>
+
+<h1 id="nginx-vs-apache">Nginx vs Apache</h1>
+
+<h2 id="nginx">Nginx</h2>
+
+<p><img src="https://anturis.com/blog/nginx-vs-apache/nginx-how-it-works.png" alt="" /></p>
+
+<p>Nginx is an open source alternative <em>event-based</em> web server (select/event based model liekd Zeus).  It was written to address the C10K problem - where one web server can handle 10,000 connections.  (Speed)</p>
+
+<p>Nginx does not create new processes for each web requests, instead the administrator configures how many worker prcoesses to create.  Each of these process is single-threaded.</p>
+
+<p>Nginx also spins off cache loader and cache manager processess to read data from disk and load it into the cache.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>“event” means a user connection</li>
+  <li>“asynchronous” means that it handles user interaction for more than one user connections at a time</li>
+  <li>“non-blocking” means it does not stop disk I/O because the CPU is busy</li>
+  <li>advanced load balancing</li>
+  <li>caching</li>
+  <li>proxy server</li>
+</ul>
+
+<h2 id="apache-tomcat">Apache Tomcat</h2>
+
+<p>Apache has been around and it’s the more popular configuration. (Power)</p>
+
+<p>HOW IT WORKS
+Apache creates processes and threads to handle additional connections. (Admin controls the maximum number of allowable processes - depends on machine memory).  Too many processes will swap memory to disk, severly downgrading performance.</p>
+
+<p>Pre-forked =&gt; One thread per process
+Worker-mode =&gt; One process multiple thread (not thread safe)</p>
+
+<p>Limiting factor in tuning Apache is memory and the potential to dead-locked threads that are contending for the same CPU and memory.</p>
+
+<p>PROS</p>
+<ul>
+  <li>Apache web server can be use to serve up static web page</li>
+  <li>Apache tomcat with mod_jk module to run Java and JSP</li>
+</ul>
+
+<p>CONS</p>
+<ul>
+  <li>Apache slows down under heavy load - because of the need to spawn new processes, thus consuming more computer memory</li>
+  <li>It also creates new threads the compete to access memory and CPU</li>
+  <li>It will refuse new connections when traffic reaches the limit of process configured</li>
+</ul>

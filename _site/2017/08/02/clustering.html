@@ -1,0 +1,58 @@
+<h2>Clustering</h2>
+<p>02 Aug 2017 - Joeny Bui</p>
+
+<h1 id="clustering">Clustering</h1>
+
+<h2 id="knn-k-nearest-neighbor">KNN (k-Nearest Neighbor)</h2>
+<h3 id="summary">Summary</h3>
+<p>Non-parameteric (does not assume a distribution) and lazy learning algorithms (no training needed).</p>
+
+<p>KNN is  where K is the number of the nearest neighbors.  The number of cluster is the deciding factor.
+Certain distance measurements are:</p>
+<ul>
+  <li>Euclidean distance</li>
+  <li>Hamming distance</li>
+  <li>Minkowski distance</li>
+</ul>
+
+<p>Eager learners will construct a generalized model before performing prediction.
+Lazy learner will model when data is calculated.</p>
+
+<h4 id="curse-fo-dimensionality">Curse fo Dimensionality</h4>
+
+<p>KNN performs better with <em>lower number of features</em>.  As number of features increases then more data is needed and is prone to overfitting.  PCA or feature selection approach is <em>recommended</em>.</p>
+
+<h4 id="transformingtranslating-data-into-vectors"><a href="https://shapeofdata.wordpress.com/2013/10/09/cast-study-2-tokens-in-census-data/">Transforming/Translating data into vectors</a></h4>
+
+<ul>
+  <li>token</li>
+  <li>make a list of items into equal distance: (private, self-employed, federal gove) to (1,0,0),(0,1,0),(0,0,1) - set the data into (true/false)</li>
+</ul>
+
+<h4 id="steps">Steps</h4>
+<ul>
+  <li>Calculate distance</li>
+  <li>Find closest neighbors</li>
+  <li>Vote for labels</li>
+</ul>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>no underlying assumption for data distribution</li>
+  <li>no need for training for model generation</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>testing is slower/costlier because its lazy (more data point to scan)</li>
+</ul>
+
+<h2 id="k-modes">K-modes</h2>
+
+<p>Used for clustering categorical algorithms.</p>
+
+<h2 id="k-prototypes">K-prototypes</h2>
+
+<p><a href="https://pdfs.semanticscholar.org/d42b/b5ad2d03be6d8fefa63d25d02c0711d19728.pdf">K-prototypes</a> Mixed categorical data and numerical data</p>

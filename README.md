@@ -48,9 +48,9 @@ gem install bundler jekyll
 bundler install
 ```
 4. Build the site and make it available on the local server
-   ```
-   bundle exec jekyll serve
-   ```
+```
+bundle exec jekyll serve
+```
 5. Preview your local Jekyll site in your web browser at http://localhost:4000.
 
 ### Format
