@@ -93,20 +93,20 @@ og_image: /assets/img/ellies-playhouse-icon-512.png
     </div>
     <div class="ep-gallery">
       <figure class="ep-shot">
-        <img src="https://play-lh.googleusercontent.com/wqQGV7t-fQ9wk7mp1gMMhEx4VOunho0hREtkvZNX-fqSIiLBB4Od0mh0sDGT4NMLc7k" alt="Ellie's Playhouse screenshot showing playful early learning game selection">
-        <figcaption>Choose from age-appropriate activities.</figcaption>
+        <img src="/assets/img/ellies-screenshot-actions.png" alt="Ellie's Playhouse Actions game screen with emoji and audio controls">
+        <figcaption>Actions game with listen and guess mode.</figcaption>
       </figure>
       <figure class="ep-shot">
-        <img src="https://play-lh.googleusercontent.com/qQpRCLHUhcuW-4nbYV0xfiITHYJmSbJ7uTFWdf2Ss6ZbeIVp2V3Tk-U9ut8L1kxTx9A" alt="Ellie's Playhouse screenshot showing hands-on educational gameplay">
-        <figcaption>Hands-on gameplay keeps kids engaged.</figcaption>
+        <img src="/assets/img/ellies-screenshot-hangman.png" alt="Ellie's Playhouse Hangman game screen with category and letter guesses">
+        <figcaption>Hangman mode for language and spelling practice.</figcaption>
       </figure>
       <figure class="ep-shot">
-        <img src="https://play-lh.googleusercontent.com/0aY0gL7zrzwfjRgszi2e9e0obSmthObEeHEe3CgBoxQxZVCnwtQkz3X95sQ71xkaHQ" alt="Ellie's Playhouse screenshot showing visual educational prompts for children">
-        <figcaption>Visual prompts support independent learning.</figcaption>
+        <img src="/assets/img/ellies-screenshot-card-memory.png" alt="Ellie's Playhouse Card Memory screen with a 12-card grid">
+        <figcaption>Card Memory game to strengthen focus and recall.</figcaption>
       </figure>
       <figure class="ep-shot">
-        <img src="https://play-lh.googleusercontent.com/oP94cM43bNel79jF8ur8FGGmwbli9yz1IhtvfSDM9FJISgHKM2zK0ZOsFApeeLgL1mqo" alt="Ellie's Playhouse screenshot showing in-app educational challenge completion">
-        <figcaption>Short challenges build confidence step by step.</figcaption>
+        <img src="/assets/img/ellies-screenshot-puzzle.png" alt="Ellie's Playhouse puzzle screen showing a 4x4 animal tile puzzle">
+        <figcaption>Puzzle mode with adjustable grid difficulty.</figcaption>
       </figure>
     </div>
   </div>

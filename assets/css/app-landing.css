@@ -356,16 +356,17 @@ p {
 }
 
 .ep-gallery {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .ep-shot {
   overflow: hidden;
+  background: #140d20;
 }
 
 .ep-shot img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1179 / 2556;
   object-fit: cover;
 }
 
@@ -563,7 +564,7 @@ summary:focus-visible {
   }
 
   .ep-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ep-store-btn {
