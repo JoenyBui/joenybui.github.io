@@ -5,7 +5,7 @@ description: A playful education app for young kids with engaging activities tha
 permalink: /ellies-playhouse/
 ios_url: https://apps.apple.com/us/app/ellies-playhouse/id1665412378
 android_url: https://play.google.com/store/apps/details?id=com.ellies.playhouse
-privacy_url: /ellies_playhouse.html
+privacy_url: "#privacy-policy"
 age_range: Ages 2+
 og_image: https://play-lh.googleusercontent.com/hhora95Hg0dNwL1-gtL3TgwYv85khiW2Yd0eLtWLuoUiqRWMKfvZ0zAr9OmIPtyRn1s
 ---
@@ -157,6 +157,57 @@ og_image: https://play-lh.googleusercontent.com/hhora95Hg0dNwL1-gtL3TgwYv85khiW2
       <details>
         <summary>What devices are supported?</summary>
         <p>Ellie's Playhouse is available on iOS and Android devices that meet current operating system requirements.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="ep-section ep-reveal" id="privacy-policy">
+  <div class="ep-shell">
+    <div class="ep-section-head">
+      <h2>Privacy Policy</h2>
+      <p>Effective date: January 1, 2023. This policy explains how Ellie's Playhouse handles information.</p>
+    </div>
+    <div class="ep-faq">
+      <details open>
+        <summary>Overview</summary>
+        <p>Joeny Bui built Ellie's Playhouse as a free app. If you use this service, you agree to the collection and use of information described here. Personal information is used to provide and improve the service and is not shared except as described in this policy.</p>
+      </details>
+      <details>
+        <summary>Information Collection and Use</summary>
+        <p>For a better experience, the app may request certain personally identifiable information. Information requested is retained on your device and is not collected directly by us.</p>
+      </details>
+      <details>
+        <summary>Third-Party Services</summary>
+        <p>The app may use third-party services that can collect information used to identify you. Example provider: <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>Log Data</summary>
+        <p>If an error occurs in the app, third-party tools may collect log data including IP address, device name, OS version, app configuration, time/date of use, and other statistics.</p>
+      </details>
+      <details>
+        <summary>Cookies</summary>
+        <p>This service does not explicitly use cookies. Some third-party code or libraries may use cookies to improve their services. You may accept or refuse cookies depending on your device and platform settings.</p>
+      </details>
+      <details>
+        <summary>Service Providers</summary>
+        <p>Third-party companies or individuals may be used to facilitate the service, perform service-related tasks, or help analyze service usage. They may have access to personal information only to perform assigned tasks and are obligated not to disclose or use it for other purposes.</p>
+      </details>
+      <details>
+        <summary>Security</summary>
+        <p>We work to use commercially acceptable means to protect your personal information, but no method of transmission or electronic storage is completely secure, and absolute security cannot be guaranteed.</p>
+      </details>
+      <details>
+        <summary>Links to Other Sites</summary>
+        <p>This service may contain links to external websites not operated by us. We recommend reviewing the privacy policy of any external site you visit. We are not responsible for the content or privacy practices of third-party sites or services.</p>
+      </details>
+      <details>
+        <summary>Children's Privacy</summary>
+        <p>These services do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided personal information, we delete it promptly. Parents or guardians can contact us for assistance.</p>
+      </details>
+      <details>
+        <summary>Policy Updates and Contact</summary>
+        <p>This policy may be updated from time to time. Changes are posted on this page. If you have any questions or suggestions, contact <a href="mailto:joeny.bui@gmail.com">joeny.bui@gmail.com</a>.</p>
       </details>
     </div>
   </div>
