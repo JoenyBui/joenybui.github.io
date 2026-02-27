@@ -372,7 +372,9 @@ p {
 
 .ep-shot figcaption {
   padding: 0.8rem 0.95rem 1rem;
-  color: #2b4168;
+  color: #f4e8ff;
+  background: #1a1227;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-weight: 700;
 }
 
