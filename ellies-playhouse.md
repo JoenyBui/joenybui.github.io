@@ -7,14 +7,21 @@ ios_url: https://apps.apple.com/us/app/ellies-playhouse/id1665412378
 android_url: https://play.google.com/store/apps/details?id=com.ellies.playhouse
 privacy_url: "#privacy-policy"
 age_range: Ages 2+
-og_image: https://play-lh.googleusercontent.com/hhora95Hg0dNwL1-gtL3TgwYv85khiW2Yd0eLtWLuoUiqRWMKfvZ0zAr9OmIPtyRn1s
+app_icon: /assets/img/ellies-playhouse-icon-192.png
+app_icon_32: /assets/img/ellies-playhouse-icon-32.png
+app_icon_192: /assets/img/ellies-playhouse-icon-192.png
+app_icon_512: /assets/img/ellies-playhouse-icon-512.png
+og_image: /assets/img/ellies-playhouse-icon-512.png
 ---
 
 <section class="ep-hero ep-reveal">
   <div class="ep-shell ep-hero-grid">
     <div>
       <p class="ep-kicker">Built for parents and young learners</p>
-      <h1>Ellie's Playhouse</h1>
+      <div class="ep-title-row">
+        <img class="ep-app-icon" src="{{ page.app_icon }}" alt="Ellie's Playhouse app icon">
+        <h1>Ellie's Playhouse</h1>
+      </div>
       <p class="ep-subtitle">A playful learning app that turns everyday screen time into age-appropriate educational activities.</p>
       <div class="ep-cta-group">
         <a class="ep-store-btn ep-store-btn-ios" href="{{ page.ios_url }}" target="_blank" rel="noopener noreferrer">
