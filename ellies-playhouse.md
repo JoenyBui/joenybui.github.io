@@ -18,10 +18,7 @@ og_image: /assets/img/ellies-playhouse-icon-512.png
   <div class="ep-shell ep-hero-grid">
     <div>
       <p class="ep-kicker">Built for parents and young learners</p>
-      <div class="ep-title-row">
-        <img class="ep-app-icon" src="{{ page.app_icon }}" alt="Ellie's Playhouse app icon">
-        <h1>Ellie's Playhouse</h1>
-      </div>
+      <h1>Ellie's Playhouse</h1>
       <p class="ep-subtitle">A playful learning app that turns everyday screen time into age-appropriate educational activities.</p>
       <div class="ep-cta-group">
         <a class="ep-store-btn ep-store-btn-ios" href="{{ page.ios_url }}" target="_blank" rel="noopener noreferrer">
@@ -38,7 +35,7 @@ og_image: /assets/img/ellies-playhouse-icon-512.png
 
     <div class="ep-phone-wrap">
       <div class="ep-phone-card">
-        <img src="https://flycricket-screenshots.s3.amazonaws.com/404f5aad-0e2f-4c7a-bc47-cb08d2937b79/medium/a77ca8f8-ef78-4f99-b1d8-b23f727b3042" alt="Ellie's Playhouse app preview shown on a mobile screen">
+        <img src="{{ page.app_icon_512 }}" alt="Ellie's Playhouse app icon">
       </div>
       <div class="ep-phone-badge">
         <strong>{{ page.age_range }}</strong>
