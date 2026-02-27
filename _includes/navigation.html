@@ -11,8 +11,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       {% for item in site.data.navigation %}
+      {% assign is_hash_link = item.link | slice: 0, 1 %}
+      {% assign nav_href = item.link %}
+      {% assign nav_classes = "nav-link" %}
+      {% if is_hash_link == "#" %}
+        {% assign nav_classes = nav_classes | append: " js-scroll-trigger" %}
+        {% if page.url != "/" and page.url != "/index.html" %}
+          {% assign nav_href = "/" | append: item.link %}
+        {% endif %}
+      {% endif %}
       <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="{{item.link}}">{{item.name}}</a>
+        <a class="{{ nav_classes }}" href="{{ nav_href }}">{{ item.name }}</a>
       </li>
       {% endfor %}
     </ul>

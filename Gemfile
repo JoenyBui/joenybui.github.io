@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll', '~> 4.2.2'
+gem 'jekyll-theme-minimal'
+gem 'webrick', '~> 1.7'
+gem 'ffi', '~> 1.15.0'

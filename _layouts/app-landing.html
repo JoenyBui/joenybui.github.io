@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | default: 'Educational play for young kids.' }}">
+    <meta property="og:title" content="{{ page.og_title | default: page.title }}">
+    <meta property="og:description" content="{{ page.og_description | default: page.description | default: 'Educational play for young kids.' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% if page.og_image %}
+    <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+    {% endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="/assets/css/app-landing.css" rel="stylesheet">
+  </head>
+  <body>
+    <a class="ep-skip-link" href="#main-content">Skip to content</a>
+
+    <header class="ep-nav">
+      <div class="ep-shell ep-nav-inner">
+        <a class="ep-brand" href="/ellies-playhouse/">Ellie's Playhouse</a>
+        <nav class="ep-nav-links" aria-label="Primary">
+          <a href="#learning">Learning</a>
+          <a href="#screenshots">Screenshots</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">Parent FAQ</a>
+          <a href="{{ page.privacy_url | default: '/ellies_playhouse.html' }}">Privacy</a>
+          <a class="ep-nav-cta" href="#download">Get the App</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="ep-footer">
+      <div class="ep-shell">
+        <p>&copy; {{ "now" | date: "%Y" }} Ellie's Playhouse. Built for playful learning.</p>
+      </div>
+    </footer>
+  </body>
+</html>
