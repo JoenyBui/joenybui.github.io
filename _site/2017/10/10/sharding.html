@@ -40,7 +40,7 @@ Redistributing data is important as you scale.</p>
 <p><img src="https://miro.medium.com/max/700/1*fx3wbDDGHo2cgcAvDiHkDg.png" alt="Algorithm shard" /></p>
 
 <ul>
-  <li>uses a sharding function <code class="highlighter-rouge">(partition_key) -&gt; datbase_id</code>, such as <code class="highlighter-rouge">hash(key) % num_db</code>.</li>
+  <li>uses a sharding function <code class="language-plaintext highlighter-rouge">(partition_key) -&gt; datbase_id</code>, such as <code class="language-plaintext highlighter-rouge">hash(key) % num_db</code>.</li>
   <li>distributes data by its sharding function only</li>
   <li>each partition should be similarly sized</li>
   <li>(pros) great for key-value databases with homogeneous values</li>

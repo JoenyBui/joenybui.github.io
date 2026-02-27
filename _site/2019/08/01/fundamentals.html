@@ -33,12 +33,12 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
 
 <span class="k">class</span> <span class="nc">LinkedList</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">head</span> <span class="o">=</span> <span class="bp">None</span>
 </code></pre></div></div>
 
 <h2 id="binary-trees">Binary Trees</h2>
@@ -52,12 +52,12 @@
   <li>No upper limit of number of nodes</li>
 </ol>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># binary tree</span>
-<span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># binary tree
+</span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">key</span>
 </code></pre></div></div>
 
 <h3 id="tree-include">Tree Include</h3>
@@ -84,7 +84,7 @@
 <p>Trie is an efficient information re<strong>Trie</strong>val data structure (often used to store characters).  Allowed for very fast lookup.<br />
 Using Trie, search complexities can be brought to optimal limit (key length).</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Binary Tree ==&gt; M * log (N)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Binary Tree ==&gt; M * log (N)
 Trie ==&gt; O(M)
 
 where:
@@ -94,7 +94,7 @@ where:
 
 <p>Penalty is on Trie storage requirements.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Node:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Node:
     children = &lt;Character, Node&gt;    
     is_complete_word = None
 </code></pre></div></div>
